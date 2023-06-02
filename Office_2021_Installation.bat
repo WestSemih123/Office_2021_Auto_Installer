@@ -62,7 +62,7 @@ if errorlevel 2 (
     set xmlfile=w
     echo ^<Configuration^> >> Word_Excel_PowerPoint.xml
     echo   ^<Add OfficeClientEdition="!arch!" Channel="PerpetualVL2021"^> >> Word_Excel_PowerPoint.xml
-    echo     ^<Product ID="Standard2021Volume"^> >> Word_Excel_PowerPoint.xml
+    echo     ^<Product ID="ProPlus2021Volume"^> >> Word_Excel_PowerPoint.xml
     echo       ^<Language ID="!lan!" /^> >> Word_Excel_PowerPoint.xml
     echo       ^<ExcludeApp ID="Access" /^> >> Word_Excel_PowerPoint.xml
     echo       ^<ExcludeApp ID="Lync" /^> >> Word_Excel_PowerPoint.xml
