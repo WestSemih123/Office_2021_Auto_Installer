@@ -3,7 +3,7 @@ setlocal enabledelayedexpansion
 title Office 2021 Install
 
 echo Please choose language.
-choice /C TE /N /M "Turkish (T) or English (E)"
+choice /C TE /N /M "Turkce (T) or English (E)"
 
 echo ============================================================================&echo.&echo.
 
@@ -74,6 +74,7 @@ if errorlevel 2 (
     echo     ^</Product^> >> Word_Excel_PowerPoint.xml
     echo   ^</Add^> >> Word_Excel_PowerPoint.xml
     echo   ^<Remove All="True" /^> >> Word_Excel_PowerPoint.xml
+    echo   ^<RemoveMSI /^> >> Word_Excel_PowerPoint.xml
     echo ^</Configuration^> >> Word_Excel_PowerPoint.xml
     set ver=Word_Excel_PowerPoint
 ) else (
@@ -86,22 +87,23 @@ if errorlevel 2 (
     echo     ^</Product^> >> Full.xml
     echo   ^</Add^> >> Full.xml
     echo   ^<Remove All="True" /^> >> Full.xml
+    echo   ^<RemoveMSI /^> >> Full.xml
     echo ^</Configuration^> >> Full.xml
     set ver=Full
+)
+
+echo ============================================================================&echo.&echo.
+
+if "%lan%"=="en-us" (
+    echo Your office is installing.Please don't close the app.
+) else (
+    echo Office kurulumu yapiliyor.Lutfen uygulamayi kapatmayin.
 )
 
 if "%ver%"=="Full" (
     call powershell.exe -Command .\setup.exe /configure .\Full.xml
 ) else (
     call powershell.exe -Command .\setup.exe /configure .\Word_Excel_PowerPoint.xml
-)
-
-echo ============================================================================&echo.&echo.
-
-if "%lan%"=="en-us" (
-    echo Your office is installing.
-) else (
-    echo Office kurulumu yapiliyor.
 )
 
 echo ============================================================================&echo.&echo.
@@ -118,6 +120,12 @@ if "%ERRORLEVEL%"=="0" (
         echo Yukleme tamamlandi.
         if "%lan%"=="en-us" (
         msg * Please enter your license key from within the app.
+        if "%xmlfile%"=="f"(
+            del Full.xml
+            else (
+                del Word_Excel_PowerPoint.xml
+            )
+        )
     ) else (
         msg * Lutfen lisans anahtarinizi uygulama icinden girin.
         if "%xmlfile%"=="w"(
