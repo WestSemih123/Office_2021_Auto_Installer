@@ -1,6 +1,6 @@
-============================================================================
+
 # Turkce
-============================================================================
+
 # Nasil kullanilir?
 1-)SetupProd_OffScrub.exe uygulamasini calistirin ve daha sonra kurulumu yapın.
 2-)"Kaldırmak istediginiz ofis surumunu secin" bolumunde "Tum ofis surumleri" yazan secenegi isaretleyin.
@@ -11,9 +11,9 @@
 
 ## Not:**setup.exe** dosyasi "officedeploymenttool_16130-20218.exe" uygulamasından alınmıştır.Dolayisiyla bu projeyi kullandiginizda "MICROSOFT SOFTWARE LICENSE TERMS.txt" dosyasini okuyup şartlari kabul etmis olursunuz.
 ## Not: Bu araç **MICROSOFT SUPPORT AND RECOVERY ASSISTANT** uygulamasını kullanır, bu nedenle bu projeyi kullanarak Eula'yı okumuş ve hüküm ve koşulları kabul etmiş olursunuz.
-============================================================================
+===========================================================================
 # English
-============================================================================
+
 # How to use it?
 1-)Run SetupProd_OffScrub.exe and then do the installation.
 2-) In the "Select the office version you want to uninstall" section, check the option that says "All office versions".
@@ -24,4 +24,4 @@
 
 ## Note:**setup.exe** file is taken from the application "officedeploymenttool_16130-20218.exe", so by using this project you read the file "MICROSOFT SOFTWARE LICENSE TERMS.txt" and accept the terms.
 ## Note: This tool uses the **MICROSOFT SUPPORT AND RECOVERY ASSISTANT** application, so by using this project you are reading the Eula and agree to the terms and conditions.
-============================================================================
+
